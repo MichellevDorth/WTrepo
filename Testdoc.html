@@ -1,3 +1,37 @@
-hallo
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
 
-opmerking 3
+        </style>
+        <script>
+            var eerste; //globale variabele
+            function startfunctie(){
+                console.log("werkt");
+                //var eerste = 24; //lokale variabele
+                eerste = 24;
+                eerste += 15;
+                console.log("eerste: ", eerste);
+                tweedefunctie();
+                console.log("eerste: ", eerste);
+                let opvang = derdefunctie(7);
+                derdefunctie(24);
+                console.log(opvang);
+            }
+            function tweedefunctie(){
+                eerste++;
+                console.log("tweede functie");
+            }
+            function derdefunctie(eengetal){
+                console.log("dit is een getal" + eengetal)
+                return "maandag"
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="klik hier" onclick="startfunctie()" />
+    </body>
+</html>
