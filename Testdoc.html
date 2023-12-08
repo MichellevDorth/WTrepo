@@ -8,12 +8,19 @@
 
         </style>
         <script>
-            var eerste; //globale variabele
             function startfunctie(){
                 var mijngetal = document.getElementById("getalinvoer").value;
-                console.log("werkt")
-                let mijngetalinin = parseInt(mijngetal)
-                document.getElementById("uitvoer").innerHTML = mijngetalinin + mijngetalinin
+                console.log("werkt");
+                let mijngetalinin = parseInt(mijngetal);
+                document.getElementById("uitvoer").innerHTML = mijngetalinin + mijngetalinin;
+
+                var element = document.getElementById("uitvoer");
+                console.log(element);
+                element.style.backgroundColor = "red";
+            }
+            const pijltjesfunctie = (param) => {
+                console.log("hij doet het"); 
+                console.log(param);
             }
 
         </script>
@@ -22,6 +29,7 @@
         <input id="getalinvoer">
         <input type="button" value="klik hier" onclick="startfunctie()"/>
         <div id="uitvoer"></div>
+        <input type="button" value="klik hier" onclick="pijltjesfunctie()"/>
 
     </body>
 </html>
